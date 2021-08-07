@@ -6,10 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".OneFragment">
 
-    <TextView
+    <include
+        layout="@layout/layout_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ONE FRAGMENT"
-        android:gravity="center" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

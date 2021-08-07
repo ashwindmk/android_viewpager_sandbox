@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.ashwin.viewpagersandbox.frag.FragActivity;
+import com.ashwin.viewpagersandbox.frag1.Frag1Activity;
+import com.ashwin.viewpagersandbox.frag2.Frag2Activity;
 import com.ashwin.viewpagersandbox.fragtab1.FragTab1Activity;
 import com.ashwin.viewpagersandbox.fragtab2.FragTab2Activity;
 import com.ashwin.viewpagersandbox.view.ViewActivity;
@@ -23,9 +24,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, ViewActivity.class));
         });
 
-        Button fragButton = findViewById(R.id.frag_button);
-        fragButton.setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, FragActivity.class));
+        Button frag1Button = findViewById(R.id.frag_1_button);
+        frag1Button.setOnClickListener(view -> {
+            startActivity(new Intent(MainActivity.this, Frag1Activity.class));
+        });
+
+        Button frag2Button = findViewById(R.id.frag_2_button);
+        frag2Button.setOnClickListener(view -> {
+            startActivity(new Intent(MainActivity.this, Frag2Activity.class));
         });
 
         Button viewTabButton = findViewById(R.id.view_tab_button);

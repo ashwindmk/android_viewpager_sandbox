@@ -1,4 +1,4 @@
-package com.ashwin.viewpagersandbox.frag;
+package com.ashwin.viewpagersandbox.frag2;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -10,8 +10,8 @@ import com.ashwin.viewpagersandbox.OneFragment;
 import com.ashwin.viewpagersandbox.ThreeFragment;
 import com.ashwin.viewpagersandbox.TwoFragment;
 
-public class FragAdapter extends FragmentStateAdapter {
-    public FragAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+public class FragAdapter2 extends FragmentStateAdapter {
+    public FragAdapter2(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 

@@ -3,9 +3,8 @@ package com.ashwin.viewpagersandbox;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +29,9 @@ public abstract class BaseFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d(Constant.TAG, CONTEXT + ": onViewCreated");
+
+        TextView nameTextView = view.findViewById(R.id.name_text_view);
+        nameTextView.setText(CONTEXT);
     }
 
     @Override

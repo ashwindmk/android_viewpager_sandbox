@@ -24,10 +24,17 @@
         android:layout_marginBottom="24dp" />
 
     <Button
-        android:id="@+id/frag_button"
+        android:id="@+id/frag_1_button"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
-        android:text="FRAG"
+        android:text="FRAG 1"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/frag_2_button"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="FRAG 2"
         android:layout_marginBottom="24dp" />
 
     <Button

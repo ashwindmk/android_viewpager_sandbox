@@ -6,13 +6,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModelProvider;
 
 public class OneFragment extends BaseFragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
+    private FragmentViewModel mFragmentViewModel;
 
     public OneFragment() {
         Log.d(Constant.TAG, CONTEXT + ": constructor");
@@ -24,16 +24,22 @@ public class OneFragment extends BaseFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_one, container, false);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_one, container, false);
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mFragmentViewModel = new ViewModelProvider(this).get(FragmentViewModel.class);
+
+        mFragmentViewModel.getCountLiveData().observe(getViewLifecycleOwner(), n -> {
+            Log.d(Constant.TAG, CONTEXT + ": count: " + n);
+        });
+
+        Button testButton = view.findViewById(R.id.test_button);
+        testButton.setOnClickListener(v -> {
+            mFragmentViewModel.updateCount();
+        });
     }
 }

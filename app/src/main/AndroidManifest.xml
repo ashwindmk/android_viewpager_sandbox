@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewPagerSandbox">
-        <activity android:name=".fragtab1.FragTab1Activity"></activity>
-        <activity android:name=".frag.FragActivity" />
+        <activity android:name=".frag1.Frag1Activity"></activity>
+        <activity android:name=".fragtab1.FragTab1Activity" />
+        <activity android:name=".frag2.Frag2Activity" />
         <activity android:name=".viewtab.ViewTabActivity" />
         <activity android:name=".next.NextActivity" />
         <activity android:name=".fragtab2.FragTab2Activity" />
